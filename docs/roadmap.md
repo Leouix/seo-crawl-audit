@@ -4,14 +4,14 @@ SEO Crawl Audit remains a free, open-source, local-first crawler. CLI, MCP,
 GitHub Action, SnapshotV2, issue fingerprints, and report contracts remain
 backward compatible while the product grows.
 
-## Delivery status (September 2026)
+## Delivery status (October 2026)
 
-Versions through `0.14.1` are released on GitHub and npm.
-It includes scan preflight and
-progress, checkpoint/resume diagnostics, Site Metrics, the loopback-only local
+Versions through `0.15.0` are released on GitHub and npm. The product includes
+scan preflight and progress, checkpoint/resume diagnostics, Site Metrics, the loopback-only local
 web interface, opt-in Playwright rendering, MCP and agent documentation,
 English/Ukrainian reports, refreshed screenshots, public RDAP data, and clearly
-labelled Google `site:` and local indexability estimates.
+labelled Google `site:` and local indexability estimates. Saved-run comparison
+and bounded local trends are also available without recrawling.
 
 Authenticated Search Console/Bing adapters and animated demonstrations remain
 intentionally deferred. They are not prerequisites for the local product.
