@@ -19,6 +19,8 @@ coverage change. A separate synthetic two-run × 50,000-page check on Node
 24.8.0/macOS took 3.8 seconds with 606 MiB sampled peak heap and 874 MiB
 sampled peak RSS. Sampling can miss brief peaks. Remaining verification:
 manually inspect the final browser UI against that multi-run history, refresh
-README screenshots if the UI has materially changed, and benchmark a large
-number of very large runs. Neither the existing 100-run × 1,000-page benchmark
-nor the two-run × 50,000-page check proves 100-run × 50,000-page performance.
+README screenshots if the UI has materially changed. The multi-run × 50,000-page
+stress benchmark is deferred by maintainer choice; neither the existing
+100-run × 1,000-page benchmark nor the two-run × 50,000-page check proves
+100-run × 50,000-page performance. Exact-site selection is covered by a local
+UI API regression test; final browser visual QA remains pending.
