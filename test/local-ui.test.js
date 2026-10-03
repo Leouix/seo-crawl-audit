@@ -79,6 +79,12 @@ test("local UI lists history with opaque IDs and bounded pagination", async (con
   const stale = await fetch(new URL(`/api/history?limit=1&cursor=${encodeURIComponent(firstPage.nextCursor)}`, server.url));
   assert.equal(stale.status, 409);
   assert.equal((await stale.json()).reloadNeeded, true);
+  const otherSite = migrateSnapshot({ schemaVersion: 1, startUrl: "https://other.example/", pages: [{ url: "https://other.example/", status: 200 }] });
+  await writeHistorySnapshot(join(directory, ".seo-audit/history"), otherSite);
+  const selected = await fetch(new URL(`/api/history?limit=100&siteUrl=${encodeURIComponent(snapshot.siteUrl)}`, server.url)).then((value) => value.json());
+  assert.equal(selected.total, 3);
+  assert.equal(selected.runs.length, 3);
+  assert.ok(selected.runs.every((run) => run.siteUrl === snapshot.siteUrl));
 });
 
 for (const [label, createServer] of [["source build", createLocalUiServer], ["packed bundle", createBundledLocalUiServer]]) test(`local UI calculates versioned trends in a worker without page requests (${label})`, async (context) => {
