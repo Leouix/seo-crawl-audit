@@ -46,7 +46,28 @@ const current = createBaseline({
   ],
 });
 const lifecycle = diff(previous, current);
-const history = buildHistorySeries([previous, current]);
+// A longer, fully synthetic history makes the trend chart useful in screenshots.
+// These fixtures are not live measurements of quotes.toscrape.com.
+const historicalRuns = [
+  ["2026-06-01T09:00:00.000Z", 4, 3, 2, 1],
+  ["2026-06-08T09:00:00.000Z", 3, 2, 1, 2],
+  ["2026-06-15T09:00:00.000Z", 2, 3, 0, 3],
+  ["2026-06-22T09:00:00.000Z", 3, 1, 1, 1],
+  ["2026-06-29T09:00:00.000Z", 1, 2, 0, 2],
+  ["2026-07-06T09:00:00.000Z", 2, 1, 1, 3],
+].map(([generatedAt, missingDescriptions, duplicateTitles, brokenPages, thinPages]) => {
+  const paths = ["/", "/page/2/", "/page/3/", "/tag/love/"];
+  return createBaseline({
+    ...common,
+    generatedAt,
+    pages: paths.map((path, index) => basePage(path, index < duplicateTitles ? "Quotes to Scrape" : `Quotes · ${index + 1}`, {
+      description: index < missingDescriptions ? null : `A useful description for ${path}.`,
+      status: index > 0 && index <= brokenPages ? 404 : 200,
+      wordCount: index < thinPages ? 100 : 280,
+    })),
+  });
+});
+const history = buildHistorySeries([...historicalRuns, previous, current]);
 const html = renderReport({
   mode: "check",
   startUrl: url,
