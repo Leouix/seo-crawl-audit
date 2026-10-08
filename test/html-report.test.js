@@ -371,4 +371,8 @@ test("renders local history as a self-contained bilingual trend chart", () => {
   assert.match(html, /function renderHistory/);
   assert.match(html, /Локальна історія сканувань/);
   assert.match(html, /trend-line trend-/);
+  assert.match(html, /\.trend-chart \.trend-line\{fill:none\}/);
+  assert.match(html, /\.trend-info\{stroke:var\(--chart-info\);fill:var\(--chart-info\)\}/);
+  assert.match(html, /dateFormat\.format\(first\)===dateFormat\.format\(last\)/);
+  assert.match(html, /if\(points\.length===1\)historyChart\.querySelectorAll\("text"\)\[1\]\?\.remove\(\)/);
 });
