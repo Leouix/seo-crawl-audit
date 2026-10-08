@@ -1,6 +1,6 @@
 # Handoff: after report stabilization and local trends
 
-Versions through `0.15.0` are published. Local two-run comparison is available
+Versions through `0.15.1` are published. Local two-run comparison is available
 in the local UI and CLI, large standalone comparison reports use a compact
 payload, and bounded multi-run trends work across saved runs in the UI, CLI,
 and MCP.

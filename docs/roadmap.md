@@ -6,7 +6,7 @@ backward compatible while the product grows.
 
 ## Delivery status (October 2026)
 
-Versions through `0.15.0` are released on GitHub and npm. The product includes
+Versions through `0.15.1` are released on GitHub and npm. The product includes
 scan preflight and progress, checkpoint/resume diagnostics, Site Metrics, the loopback-only local
 web interface, opt-in Playwright rendering, MCP and agent documentation,
 English/Ukrainian reports, refreshed screenshots, public RDAP data, and clearly

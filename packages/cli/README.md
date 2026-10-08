@@ -34,7 +34,7 @@ the discovered URL count and requires explicit confirmation above 5,000 URLs.
 ![SEO Crawl Audit summary cards and local scan history](https://raw.githubusercontent.com/MelnixDev/seo-crawl-audit/main/docs/images/report-overview.png)
 
 The overview keeps scan coverage, issue counts, and locally stored trends in
-one place.
+one place. The example screenshot uses synthetic history, not live crawl data.
 
 The local History panel can plot 20, 50, or 100 saved-run observations without
 new page requests. Dashed segments flag changed coverage or policy; a lower
@@ -46,6 +46,14 @@ count alone is not proof of SEO improvement.
 
 Site metrics separate measured crawl data from external provider values, with
 the source and connection state shown for every indicator.
+
+### Page Explorer
+
+![SEO Crawl Audit Page Explorer with filters and per-page issue counts](https://raw.githubusercontent.com/MelnixDev/seo-crawl-audit/main/docs/images/report-pages.png)
+
+Browse checked URLs, filter by HTTP status or indexability, and open a page for
+its crawl details and current issues. The table does not claim that a page is
+indexed by a search engine.
 
 ### Interactive issue analytics
 

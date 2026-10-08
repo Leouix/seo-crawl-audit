@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.15.1 — Released
+
+- fixed Local scan history lines being filled as polygons and clarified labels
+  for multiple runs on the same day;
+- refreshed the example report with a clearly identified synthetic eight-run
+  history and updated README screenshots for Overview, Site Metrics, Issues,
+  and Page Explorer;
+- synchronized the npm README's screenshot links and release package assets.
+
 ## 0.15.0 — Released
 
 - added bounded, versioned local trend summaries across the latest 20 saved
