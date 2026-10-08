@@ -34,7 +34,7 @@ the discovered URL count and requires explicit confirmation above 5,000 URLs.
 ![SEO Crawl Audit summary cards and local scan history](docs/images/report-overview.png)
 
 The overview keeps scan coverage, issue counts, and locally stored trends in
-one place.
+one place. The example screenshot uses synthetic history, not live crawl data.
 
 The local UI also has a **History / Історія** section. Select two saved
 same-site runs to compare observed findings without recrawling. The comparison
