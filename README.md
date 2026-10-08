@@ -55,6 +55,14 @@ See [local trends](docs/local-trends.md) for coverage and automation semantics.
 Site metrics separate measured crawl data from external provider values, with
 the source and connection state shown for every indicator.
 
+### Page Explorer
+
+![SEO Crawl Audit Page Explorer with filters and per-page issue counts](docs/images/report-pages.png)
+
+Browse checked URLs, filter by HTTP status or indexability, and open a page for
+its crawl details and current issues. The table does not claim that a page is
+indexed by a search engine.
+
 ### Interactive issue analytics
 
 ![SEO Crawl Audit interactive issue statistics](docs/images/report-analytics.png)
